@@ -9,3 +9,38 @@ for (var pixel of newImage.values()){
 }
 
 print(newImage);
+
+
+/////////////////////////////////
+
+// write your code here
+
+
+var img = new SimpleImage("hilton.jpg");
+
+var w = img.getWidth();
+
+for (var pixel of img.values()){
+    
+    var x_cord = pixel.getX();
+    
+    var y_cord = pixel.getY();
+    
+    
+    if(x_cord < (pixel/3)){
+        pixel.setRed(x_cord);
+    }
+    else if((x_cord < (pixel/3)) && (y_cord > (pixel/3)) ){
+          pixel.setGreen(x_cord);
+    }
+    else{
+          pixel.setBlue(x_cord);
+    }
+}
+
+print(img);
+
+print('width:'+w);
+
+print('y_coordinates: '+y_cord);
+print('x_coordinates: '+x_cord);
